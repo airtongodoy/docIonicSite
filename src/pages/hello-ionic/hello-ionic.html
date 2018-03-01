@@ -1,16 +1,18 @@
+ 
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Hello Ionic</ion-title>
-  </ion-navbar>
-</ion-header>
-
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button left menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Olá</ion-title>
+  </ion-toolbar>
+</ion-header> 
 
 <ion-content padding>
-
-  <h3>Welcome to your first Ionic app!</h3>
+  <h1>Bem Vindo</h1>
+  <h3>E-mail Login: {{email}}</h3>
 
   <p>
     This starter project is our way of helping you get a functional app running in record time.
@@ -22,4 +24,5 @@
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p>
 
+  <button ion-button full color="xpto" style="margin-top: 20px;" (click)="logout()">Logout</button>
 </ion-content>
