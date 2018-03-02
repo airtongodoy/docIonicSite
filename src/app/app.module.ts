@@ -1,3 +1,4 @@
+import { Facebook } from '@ionic-native/facebook';
 import { SignInPage } from './../pages/sign-in/sign-in';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,6 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

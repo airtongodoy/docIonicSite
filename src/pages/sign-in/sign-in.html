@@ -7,7 +7,7 @@
 <ion-header>
   
   <div class="imgLogin center ">
-    <img src="../assets/imgs/login.png" alt="">
+    <img src="../assets/imgs/login2.png" alt="">
     
 
   </div>
@@ -21,10 +21,11 @@
   
   <!-- <form [formGroup]="credentialsForm" (ngSubmit)="onSubmit(credentialsForm.value)"></form> -->
   <form class="" [formGroup]="credentialsForm" (ngSubmit)="onSubmit(credentialsForm.value)" class=" alinhar">
-
+    <div class="sombraBox2">
+    
     <ion-item [ngClass]="{'error-border':!credentialsForm.controls.email.valid && credentialsForm.controls.email.touched}">
       <ion-label floating>E-mail</ion-label>
-      <ion-input  formControlName="email" type="text"></ion-input>
+      <ion-input  formControlName="email" type="text" ng-value="varMail"></ion-input>
     </ion-item>
 
 
@@ -53,7 +54,7 @@
     <ion-item *ngIf="credentialsForm.controls.password.hasError('minlength') && credentialsForm.controls.password.touched">
       <p>Senha informada é pequena demais (Mínimo 8 caracteres)!</p>
     </ion-item>
-
+</div>
     <ion-row>
       <ion-col text-center>
         <button ion-button full color="primary" class=" sombraBox2" [disabled]="!credentialsForm.valid" style="margin-top: 20px;" type="submit">
@@ -69,11 +70,31 @@
     <ion-row>
       <ion-col text-center>
         <button ion-button clear color="light" (click)="onForgotPassword()">
-          Esqueceu sua senha?
+          Cadastre-se
+        </button>
+        <button ion-button clear color="light" (click)="onForgotPassword()">
+          Esquec1 minha senha
         </button>
       </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <button ion-button full icon-left (click)='loginFacebook();'>
+        <ion-icon name="logo-facebook"></ion-icon>Login com Facebook
+      </button>
     </ion-row>
 
   </form>
   </div>
 </ion-content>
+
+
+
+
+
+
+
+
+
